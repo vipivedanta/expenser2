@@ -1,0 +1,43 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Exception;
+use App\Models\User;
+use Hash;
+use Uuid;
+
+class UserController extends Controller
+{
+    
+
+	/**
+	** Register an user
+	* @param user details
+	* @return json
+	**/
+    public function register(Request $request){
+    	try{
+
+            $user = new User;
+            $user->uuid = (String) Uuid::generate(4);
+            $user->first_name = $request->firstname;
+            $user->last_name = $request->lastname;
+            $user->email = $request->email;
+            $user->password = Hash::make($request->password);
+            $user->save();
+
+    		return response()->json([
+    			'status' => true,
+    			'msg' => 'You have been successfully registered'
+    		]);
+
+    	}catch(Exception $e){
+    		return response()->json([
+    			'status' => true,
+    			'msg' => $e->getMessage()
+    		]);
+    	}
+    }
+}
