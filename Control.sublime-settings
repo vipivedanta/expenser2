@@ -1,0 +1,17 @@
+"downloader_precedence":
+{
+    "linux":
+    [
+        "curl",
+        "wget"
+    ],
+    "osx":
+    [
+        "curl",
+        "urllib"
+    ],
+    "windows":
+    [
+        "wininet"
+    ]
+},

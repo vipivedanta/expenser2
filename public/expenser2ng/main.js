@@ -36,16 +36,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _login_component_login_component_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login-component/login-component.component */ "./src/app/login-component/login-component.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
 /* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
+
 
 
 
 
 
 var routes = [
-    { path: 'login', component: _login_component_login_component_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponentComponent"] },
-    { path: 'register', component: _register_register_component__WEBPACK_IMPORTED_MODULE_4__["RegisterComponent"] }
+    { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
+    { path: 'register', component: _register_register_component__WEBPACK_IMPORTED_MODULE_4__["RegisterComponent"] },
+    { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -137,8 +140,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _login_component_login_component_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./login-component/login-component.component */ "./src/app/login-component/login-component.component.ts");
-/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
+
 
 
 
@@ -155,8 +160,9 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _login_component_login_component_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponentComponent"],
-                _register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"]
+                _register_register_component__WEBPACK_IMPORTED_MODULE_7__["RegisterComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"],
+                _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -176,56 +182,136 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/login-component/login-component.component.css":
-/*!***************************************************************!*\
-  !*** ./src/app/login-component/login-component.component.css ***!
-  \***************************************************************/
+/***/ "./src/app/dashboard/dashboard.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/dashboard/dashboard.component.css ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luLWNvbXBvbmVudC9sb2dpbi1jb21wb25lbnQuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LmNzcyJ9 */"
 
 /***/ }),
 
-/***/ "./src/app/login-component/login-component.component.html":
-/*!****************************************************************!*\
-  !*** ./src/app/login-component/login-component.component.html ***!
-  \****************************************************************/
+/***/ "./src/app/dashboard/dashboard.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/dashboard/dashboard.component.html ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Login now!!</h2>"
+module.exports = "<p>\n  dashboard works!\n</p>\n"
 
 /***/ }),
 
-/***/ "./src/app/login-component/login-component.component.ts":
-/*!**************************************************************!*\
-  !*** ./src/app/login-component/login-component.component.ts ***!
-  \**************************************************************/
-/*! exports provided: LoginComponentComponent */
+/***/ "./src/app/dashboard/dashboard.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/dashboard/dashboard.component.ts ***!
+  \**************************************************/
+/*! exports provided: DashboardComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponentComponent", function() { return LoginComponentComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
-var LoginComponentComponent = /** @class */ (function () {
-    function LoginComponentComponent() {
+var DashboardComponent = /** @class */ (function () {
+    function DashboardComponent() {
     }
-    LoginComponentComponent.prototype.ngOnInit = function () {
+    DashboardComponent.prototype.ngOnInit = function () {
     };
-    LoginComponentComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-login-component',
-            template: __webpack_require__(/*! ./login-component.component.html */ "./src/app/login-component/login-component.component.html"),
-            styles: [__webpack_require__(/*! ./login-component.component.css */ "./src/app/login-component/login-component.component.css")]
+            selector: 'app-dashboard',
+            template: __webpack_require__(/*! ./dashboard.component.html */ "./src/app/dashboard/dashboard.component.html"),
+            styles: [__webpack_require__(/*! ./dashboard.component.css */ "./src/app/dashboard/dashboard.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], LoginComponentComponent);
-    return LoginComponentComponent;
+    ], DashboardComponent);
+    return DashboardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/login/login.component.css ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.html":
+/*!********************************************!*\
+  !*** ./src/app/login/login.component.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"flex-center text-center\">\n\n<!-- Default form register -->\n<form class=\"text-center border border-light p-5\">\n\n    <p class=\"h4 mb-4\">Login</p>\n\n    <div *ngIf=\"loginError\" class=\"alert alert-danger\">{{ loginError }}</div>\n\n\n\n    <input \n    \ttype=\"text\" \n    \trequired \n    \tname=\"email\"  \n    \t[(ngModel)]=\"user.email\"  \n    \tclass=\"form-control\" \n    \tplaceholder=\"Email\" \n    \t#email=\"ngModel\">\n\n    \t<span *ngIf=\"email.invalid && (email.dirty || email.touched)\" class=\"text text-danger\">That's not a valid Email</span>\n\n    <div class=\"mb-4\"></div>\n\n    <!-- Password -->\n    <input \n    \ttype=\"password\" \n    \trequired\n    \tname=\"password\"\n    \tclass=\"form-control\" \n    \tplaceholder=\"Password\" \n    \t#password=\"ngModel\"\n    \t[(ngModel)]=\"user.password\"\n    />\n\n    <span *ngIf=\"password.invalid && (password.dirty || password.touched)\"\n    class=\"text text-danger\">Please provide your password</span>\n    <!-- Sign up button -->\n    <button class=\"btn btn-info my-4 btn-block\" (click)=\"doLogin(user)\" type=\"submit\">Login</button>\n\n    <!-- Social register -->\n    <p>or login with:</p>\n\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-facebook-f\"></i>\n    </a>\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-twitter\"></i>\n    </a>\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-linkedin-in\"></i>\n    </a>\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-github\"></i>\n    </a>\n\n    <hr>\n\n    <!-- Terms of service -->\n    <p>New user ? <a href=\"/register\">Signup here</a></p>\n\n</form>\n<!-- Default form register -->\n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/login/login.component.ts ***!
+  \******************************************/
+/*! exports provided: LoginComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _services_localstorage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/localstorage.service */ "./src/app/services/localstorage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent(authService, localStorage, router) {
+        this.authService = authService;
+        this.localStorage = localStorage;
+        this.router = router;
+        this.user = { email: '', password: '' };
+        this.loginError = false;
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent.prototype.doLogin = function (user) {
+        var _this = this;
+        this.authService.loginUser(user).subscribe(function (response) {
+            if (response.status) {
+                _this.localStorage.setUser(response.user);
+                _this.router.navigate(['/dashboard']);
+            }
+            else {
+                _this.loginError = response.msg;
+            }
+        });
+    };
+    LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-login',
+            template: __webpack_require__(/*! ./login.component.html */ "./src/app/login/login.component.html"),
+            providers: [_services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], _services_localstorage_service__WEBPACK_IMPORTED_MODULE_3__["LocalstorageService"]],
+            styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], _services_localstorage_service__WEBPACK_IMPORTED_MODULE_3__["LocalstorageService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+    ], LoginComponent);
+    return LoginComponent;
 }());
 
 
@@ -333,15 +419,64 @@ var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
         this.registerUrl = 'api/register';
+        this.loginUrl = 'api/login';
     }
     AuthService.prototype.registerUser = function (userData) {
         return this.http.post(this.registerUrl, userData);
+    };
+    AuthService.prototype.loginUser = function (userData) {
+        return this.http.post(this.loginUrl, userData);
     };
     AuthService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], AuthService);
     return AuthService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/localstorage.service.ts":
+/*!**************************************************!*\
+  !*** ./src/app/services/localstorage.service.ts ***!
+  \**************************************************/
+/*! exports provided: LocalstorageService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocalstorageService", function() { return LocalstorageService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var LocalstorageService = /** @class */ (function () {
+    function LocalstorageService() {
+    }
+    LocalstorageService.prototype.getItem = function (itemName) {
+        item = localStorage.getItem(itemName);
+        if (item == '')
+            return false;
+        return JSON.parse(item);
+    };
+    LocalstorageService.prototype.setItem = function (itemName, itemValue) {
+        localStorage.setItem(itemName, itemValue);
+    };
+    LocalstorageService.prototype.setUser = function (user) {
+        this.setItem('user', JSON.stringify(user));
+    };
+    LocalstorageService.prototype.getUser = function () {
+        return this.getItem('uuid');
+    };
+    LocalstorageService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], LocalstorageService);
+    return LocalstorageService;
 }());
 
 
@@ -409,7 +544,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\expenser2\expenser2ng\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/anu/works/expenser2/expenser2ng/src/main.ts */"./src/main.ts");
 
 
 /***/ })
