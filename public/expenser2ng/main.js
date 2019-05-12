@@ -138,11 +138,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var _dashboard_header_dashboard_header_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./dashboard-header/dashboard-header.component */ "./src/app/dashboard-header/dashboard-header.component.ts");
+
+
 
 
 
@@ -159,23 +163,86 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _register_register_component__WEBPACK_IMPORTED_MODULE_7__["RegisterComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"],
-                _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_9__["LoginComponent"],
+                _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"],
+                _dashboard_header_dashboard_header_component__WEBPACK_IMPORTED_MODULE_11__["DashboardHeaderComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/dashboard-header/dashboard-header.component.css":
+/*!*****************************************************************!*\
+  !*** ./src/app/dashboard-header/dashboard-header.component.css ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC1oZWFkZXIvZGFzaGJvYXJkLWhlYWRlci5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/dashboard-header/dashboard-header.component.html":
+/*!******************************************************************!*\
+  !*** ./src/app/dashboard-header/dashboard-header.component.html ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" href=\"#\">{{ appName }}</a>\n  <button class=\"navbar-toggler hidden-sm-up\" type=\"button\" (click)=\"isNavbarCollapsed = !isNavbarCollapsed\" data-target=\"#navbarsDefault\" aria-controls=\"navbarsDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div [ngbCollapse]=\"isNavbarCollapsed\"  class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    \t<ul class=\"navbar-nav mr-auto\">\n\t      <li class=\"nav-item active\">\n\t        <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\n\t      </li>\n     \n\n\t      <li class=\"nav-item dropdown\">\n\t     \n\t\t    <div ngbDropdown class=\"d-inline-block\">\n\t\t      <button class=\"btn\" id=\"dropdownBasic1\" ngbDropdownToggle>{{ user.firstname }} {{ user.lastname }}</button>\n\t\t      <div ngbDropdownMenu aria-labelledby=\"dropdownBasic1\">\n\t\t        <button ngbDropdownItem>My Profile</button>\n\t\t        <button ngbDropdownItem>Logout</button>\n\t\t      </div>\n\t\t    </div>\n\t      </li>\n    \n    </ul>\n   \n  </div>\n</nav>"
+
+/***/ }),
+
+/***/ "./src/app/dashboard-header/dashboard-header.component.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/dashboard-header/dashboard-header.component.ts ***!
+  \****************************************************************/
+/*! exports provided: DashboardHeaderComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardHeaderComponent", function() { return DashboardHeaderComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var DashboardHeaderComponent = /** @class */ (function () {
+    function DashboardHeaderComponent() {
+        this.appName = 'Expenser 2';
+    }
+    DashboardHeaderComponent.prototype.ngOnInit = function () {
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], DashboardHeaderComponent.prototype, "user", void 0);
+    DashboardHeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-dashboard-header',
+            template: __webpack_require__(/*! ./dashboard-header.component.html */ "./src/app/dashboard-header/dashboard-header.component.html"),
+            styles: [__webpack_require__(/*! ./dashboard-header.component.css */ "./src/app/dashboard-header/dashboard-header.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], DashboardHeaderComponent);
+    return DashboardHeaderComponent;
 }());
 
 
@@ -200,7 +267,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  dashboard works!\n</p>\n"
+module.exports = "<div class=\"flex-center text-center\">\n<app-dashboard-header [user]=\"user\"></app-dashboard-header>\n</div>"
 
 /***/ }),
 
@@ -216,20 +283,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_localstorage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/localstorage.service */ "./src/app/services/localstorage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
 
 
 var DashboardComponent = /** @class */ (function () {
-    function DashboardComponent() {
+    function DashboardComponent(localstorage, router) {
+        this.localstorage = localstorage;
+        this.router = router;
+        this.user = {};
     }
     DashboardComponent.prototype.ngOnInit = function () {
+        this.user = this.localstorage.getUser();
+        if (!this.user) {
+            this.router.navigate(['/login']);
+        }
     };
     DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-dashboard',
             template: __webpack_require__(/*! ./dashboard.component.html */ "./src/app/dashboard/dashboard.component.html"),
+            providers: [_services_localstorage_service__WEBPACK_IMPORTED_MODULE_2__["LocalstorageService"]],
             styles: [__webpack_require__(/*! ./dashboard.component.css */ "./src/app/dashboard/dashboard.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_localstorage_service__WEBPACK_IMPORTED_MODULE_2__["LocalstorageService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], DashboardComponent);
     return DashboardComponent;
 }());
@@ -336,7 +415,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex-center text-center\">\n\n<!-- Default form register -->\n<form class=\"text-center border border-light p-5\">\n\n    <p class=\"h4 mb-4\">Sign up</p>\n\n    <div *ngIf=\"registrationError\" class=\"alert alert-danger\">{{ registrationError }}</div>\n\n    <div class=\"form-row mb-4\">\n        <div class=\"col\">\n            <!-- First name -->\n            <input \n            \ttype=\"text\" \n            \trequired \n            \tname=\"firstname\"  \n            \t[(ngModel)]=\"user.firstname\"  \n            \tclass=\"form-control\" \n            \tplaceholder=\"First name\" \n            \t#firstname=\"ngModel\">\n            <span *ngIf=\"firstname.invalid && (firstname.dirty || firstname.touched)\" class=\"text text-danger\">Please tell us your first name</span>\n        </div>\n        <div class=\"col\">\n            <input \n            \ttype=\"text\" \n            \trequired \n            \tname=\"lastname\"  \n            \t[(ngModel)]=\"user.lastname\"  \n            \tclass=\"form-control\" \n            \tplaceholder=\"Last name\" \n            \t#lastname=\"ngModel\">\n\n            \t<span *ngIf=\"lastname.invalid && (lastname.dirty || lastname.touched)\" class=\"text text-danger\">..and your last name too!</span>\n        </div>\n    </div>\n\n    <input \n    \ttype=\"text\" \n    \trequired \n    \tname=\"email\"  \n    \t[(ngModel)]=\"user.email\"  \n    \tclass=\"form-control\" \n    \tplaceholder=\"Email\" \n    \t#email=\"ngModel\">\n\n    \t<span *ngIf=\"email.invalid && (email.dirty || email.touched)\" class=\"text text-danger\">That's not a valid Email</span>\n\n    <div class=\"mb-4\"></div>\n\n    <!-- Password -->\n    <input type=\"password\" id=\"defaultRegisterFormPassword\" class=\"form-control\" placeholder=\"Password\" aria-describedby=\"defaultRegisterFormPasswordHelpBlock\">\n    <small id=\"defaultRegisterFormPasswordHelpBlock\" class=\"form-text text-muted mb-4\">\n        At least 8 characters and 1 digit\n    </small>\n\n    <!-- Newsletter -->\n    <div class=\"custom-control custom-checkbox\">\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"defaultRegisterFormNewsletter\">\n        <label class=\"custom-control-label\" for=\"defaultRegisterFormNewsletter\">Subscribe to our newsletter</label>\n    </div>\n\n    <!-- Sign up button -->\n    <button class=\"btn btn-info my-4 btn-block\" (click)=\"registerUser()\" type=\"submit\">Sign up</button>\n\n    <!-- Social register -->\n    <p>or sign up with:</p>\n\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-facebook-f\"></i>\n    </a>\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-twitter\"></i>\n    </a>\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-linkedin-in\"></i>\n    </a>\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-github\"></i>\n    </a>\n\n    <hr>\n\n    <!-- Terms of service -->\n    <p>By clicking\n        <em>Sign up</em> you agree to our\n        <a href=\"\" target=\"_blank\">terms of service</a>\n\n</form>\n<!-- Default form register -->\n\n</div>"
+module.exports = "<div class=\"flex-center text-center\">\n\n<!-- Default form register -->\n<form class=\"text-center border border-light p-5\">\n\n    <p class=\"h4 mb-4\">Sign up</p>\n\n    <div *ngIf=\"registrationError\" class=\"alert alert-danger\">{{ registrationError }}</div>\n\n    <div class=\"form-row mb-4\">\n        <div class=\"col\">\n            <!-- First name -->\n            <input \n            \ttype=\"text\" \n            \trequired \n            \tname=\"firstname\"  \n            \t[(ngModel)]=\"user.firstname\"  \n            \tclass=\"form-control\" \n            \tplaceholder=\"First name\" \n            \t#firstname=\"ngModel\">\n            <span *ngIf=\"firstname.invalid && (firstname.dirty || firstname.touched)\" class=\"text text-danger\">Please tell us your first name</span>\n        </div>\n        <div class=\"col\">\n            <input \n            \ttype=\"text\" \n            \trequired \n            \tname=\"lastname\"  \n            \t[(ngModel)]=\"user.lastname\"  \n            \tclass=\"form-control\" \n            \tplaceholder=\"Last name\" \n            \t#lastname=\"ngModel\">\n\n            \t<span *ngIf=\"lastname.invalid && (lastname.dirty || lastname.touched)\" class=\"text text-danger\">..and your last name too!</span>\n        </div>\n    </div>\n\n    <input \n    \ttype=\"text\" \n    \trequired \n    \tname=\"email\"  \n    \t[(ngModel)]=\"user.email\"  \n    \tclass=\"form-control\" \n    \tplaceholder=\"Email\" \n    \t#email=\"ngModel\">\n\n    \t<span *ngIf=\"email.invalid && (email.dirty || email.touched)\" class=\"text text-danger\">That's not a valid Email</span>\n\n    <div class=\"mb-4\"></div>\n\n    <!-- Password -->\n    <input \n        type=\"password\" \n        required \n        class=\"form-control\" \n        placeholder=\"Password\" \n        [(ngModel)] = \"user.password\"\n        #password=\"ngModel\"\n        name=\"password\"\n        aria-describedby=\"defaultRegisterFormPasswordHelpBlock\">\n    <small id=\"defaultRegisterFormPasswordHelpBlock\" class=\"form-text text-muted mb-4\">\n        At least 8 characters and 1 digit\n    </small>\n    <span *ngIf=\"password.invalid && (password.dirty || password.touched)\" class=\"text text-danger\">Please provide a password</span>\n\n    <!-- Newsletter -->\n    <div class=\"custom-control custom-checkbox\">\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"defaultRegisterFormNewsletter\">\n        <label class=\"custom-control-label\" for=\"defaultRegisterFormNewsletter\">Subscribe to our newsletter</label>\n    </div>\n\n    <!-- Sign up button -->\n    <button class=\"btn btn-info my-4 btn-block\" (click)=\"registerUser()\" type=\"submit\">Sign up</button>\n\n    <!-- Social register -->\n    <p>or sign up with:</p>\n\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-facebook-f\"></i>\n    </a>\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-twitter\"></i>\n    </a>\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-linkedin-in\"></i>\n    </a>\n    <a type=\"button\" class=\"light-blue-text mx-2\">\n        <i class=\"fab fa-github\"></i>\n    </a>\n\n    <hr>\n\n    <!-- Terms of service -->\n    <p>By clicking\n        <em>Sign up</em> you agree to our\n        <a href=\"\" target=\"_blank\">terms of service</a>\n\n</form>\n<!-- Default form register -->\n\n</div>"
 
 /***/ }),
 
@@ -363,15 +442,15 @@ var RegisterComponent = /** @class */ (function () {
         this.authService = authService;
         this.router = router;
         this.user = {
-            firstname: 'vipin',
-            lastname: 'kumar',
-            email: 'vipins10@mail.com',
-            password: 'mypassword'
+            firstname: '',
+            lastname: '',
+            email: '',
+            password: ''
         };
         this.registrationError = false;
     }
     RegisterComponent.prototype.ngOnInit = function () { };
-    RegisterComponent.prototype.registerUser = function (user) {
+    RegisterComponent.prototype.registerUser = function () {
         var _this = this;
         this.authService.registerUser(this.user).subscribe(function (response) {
             console.log(response);
@@ -454,12 +533,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var LocalstorageService = /** @class */ (function () {
     function LocalstorageService() {
+        this.item = '';
     }
-    LocalstorageService.prototype.getItem = function (itemName) {
-        item = localStorage.getItem(itemName);
-        if (item == '')
+    LocalstorageService.prototype.getItemByName = function (itemName) {
+        this.item = localStorage.getItem(itemName);
+        if (this.item == '')
             return false;
-        return JSON.parse(item);
+        return JSON.parse(this.item);
     };
     LocalstorageService.prototype.setItem = function (itemName, itemValue) {
         localStorage.setItem(itemName, itemValue);
@@ -468,7 +548,7 @@ var LocalstorageService = /** @class */ (function () {
         this.setItem('user', JSON.stringify(user));
     };
     LocalstorageService.prototype.getUser = function () {
-        return this.getItem('uuid');
+        return this.getItemByName('user');
     };
     LocalstorageService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({

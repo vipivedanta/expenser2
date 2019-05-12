@@ -5,13 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class LocalstorageService {
 
+	 item = '';
 	  constructor() { }
 
-	  getItem(itemName){
-	  	item = localStorage.getItem(itemName);
-	  	if(item == '')
+	  getItemByName(itemName){
+	  	this.item = localStorage.getItem(itemName);
+	  	if(this.item == '')
 	  		return false;
-	  	return JSON.parse(item);
+	  	return JSON.parse(this.item);
 	  }
 
 	  setItem(itemName,itemValue){
@@ -23,6 +24,6 @@ export class LocalstorageService {
 	  }
 
 	  getUser(){
-	  	return this.getItem('uuid');
+	  	return this.getItemByName('user');
 	  }
 }

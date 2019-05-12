@@ -48,10 +48,19 @@
     <div class="mb-4"></div>
 
     <!-- Password -->
-    <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <input 
+        type="password" 
+        required 
+        class="form-control" 
+        placeholder="Password" 
+        [(ngModel)] = "user.password"
+        #password="ngModel"
+        name="password"
+        aria-describedby="defaultRegisterFormPasswordHelpBlock">
     <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
         At least 8 characters and 1 digit
     </small>
+    <span *ngIf="password.invalid && (password.dirty || password.touched)" class="text text-danger">Please provide a password</span>
 
     <!-- Newsletter -->
     <div class="custom-control custom-checkbox">
