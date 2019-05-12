@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MessageService } from './services/message.service';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
+import { MessageComponent } from './message/message.component';
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.co
     RegisterComponent,
     LoginComponent,
     DashboardComponent,
-    DashboardHeaderComponent
+    DashboardHeaderComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.co
     HttpClientModule,
     NgbModule
   ],
-  providers: [],
+  providers: [ MessageService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

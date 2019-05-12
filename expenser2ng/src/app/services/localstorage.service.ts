@@ -26,4 +26,8 @@ export class LocalstorageService {
 	  getUser(){
 	  	return this.getItemByName('user');
 	  }
+
+	  removeUser(){
+	  	localStorage.removeItem('user');
+	  }
 }
