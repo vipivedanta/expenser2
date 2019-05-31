@@ -12,10 +12,10 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   user: User = {
-     firstname : 'vipin',
-     lastname : 'kumar',
-     email : 'vipins10@mail.com',
-     password : 'mypassword'
+     firstname : '',
+     lastname : '',
+     email : '',
+     password : ''
   };
 
   registrationError = false;
@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {}
 
-  registerUser(user){
+  registerUser(){
      this.authService.registerUser(this.user).subscribe( (response) => {
         if(response.status == true){
             this.router.navigate(['/login']);

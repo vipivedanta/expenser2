@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\expenser2\expenser2ng\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/anu/works/expenser2/expenser2ng/src/styles.css */"./src/styles.css");
 
 
 /***/ })

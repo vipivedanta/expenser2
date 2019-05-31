@@ -4,18 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Exception;
-use App\Models\User;
+use App\User;
 use Hash;
 use Uuid;
 use App\Http\Requests\Users\RegisterUserRequest;
 use App\Http\Traits\ResponseTrait;
+use Auth;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class UserController extends Controller
 {
     
     use ResponseTrait;
-
-	/**
+    use AuthenticatesUsers;
+	
+    /**
 	** Register an user
 	* @param user details
 	* @return json
@@ -41,16 +44,37 @@ class UserController extends Controller
     	}
     }
 
+
+
+
     /**
-    ** User login
-    * @param user
+    ** Login the user
+    * @param user details
     * @return json
     **/
     public function login(Request $request){
-        try{
+            try{
+                $credentials = $request->only(['email','password']);
+                $user = Auth::attempt($credentials);
+              
+                if(!$user)
+                    throw new Exception('Invalid login credentials');
 
-        }catch(Exception $e){
-            return $this->returnException($e);
-        }
+                return response()->json([
+                        'status' => true,
+                        'msg' => 'Successfully logged in',
+                        'user' => [ 
+                                'uuid' => Auth::user()->uuid,
+                                'firstname' => Auth::user()->first_name,
+                                'lastname' => Auth::user()->last_name
+                        ]
+                ]);
+
+            }catch(Exception $e){
+                return response()->json([
+                    'status' => false,
+                    'msg' => $e->getMessage()
+                ]);
+            }
     }
 }
