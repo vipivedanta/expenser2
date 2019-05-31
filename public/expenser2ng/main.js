@@ -288,7 +288,6 @@ var RegisterComponent = /** @class */ (function () {
     RegisterComponent.prototype.registerUser = function (user) {
         var _this = this;
         this.authService.registerUser(this.user).subscribe(function (response) {
-            console.log(response);
             if (response.status == true) {
                 _this.router.navigate(['/login']);
             }

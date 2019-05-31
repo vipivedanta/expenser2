@@ -7,17 +7,20 @@ use Exception;
 use App\Models\User;
 use Hash;
 use Uuid;
+use App\Http\Requests\Users\RegisterUserRequest;
+use App\Http\Traits\ResponseTrait;
 
 class UserController extends Controller
 {
     
+    use ResponseTrait;
 
 	/**
 	** Register an user
 	* @param user details
 	* @return json
 	**/
-    public function register(Request $request){
+    public function register(RegisterUserRequest $request){
     	try{
 
             $user = new User;
@@ -28,16 +31,26 @@ class UserController extends Controller
             $user->password = Hash::make($request->password);
             $user->save();
 
-    		return response()->json([
-    			'status' => true,
-    			'msg' => 'You have been successfully registered'
-    		]);
+    		return $this->returnResponse([
+                'status' => true,
+                'msg' => 'You have been successfully registered'
+            ]);
 
     	}catch(Exception $e){
-    		return response()->json([
-    			'status' => true,
-    			'msg' => $e->getMessage()
-    		]);
+    		return $this->returnException($e);
     	}
+    }
+
+    /**
+    ** User login
+    * @param user
+    * @return json
+    **/
+    public function login(Request $request){
+        try{
+
+        }catch(Exception $e){
+            return $this->returnException($e);
+        }
     }
 }
